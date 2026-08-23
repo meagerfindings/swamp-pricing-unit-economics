@@ -1,0 +1,22 @@
+{
+  "extension": "@mgreten/pricing-unit-economics",
+  "version": "2026.08.23.1",
+  "reviewedAt": "2026-08-23T20:25:00Z",
+  "dimensions": [
+    { "id": "credentials-secrets", "verdict": "na", "note": "No credentials, environment access, or external services." },
+    { "id": "logging-quality", "verdict": "pass", "note": "The method logs structured entry and completion events without input data." },
+    { "id": "error-handling", "verdict": "pass", "note": "All validation and freshness failures occur before the sole resource write and return sorted diagnostics." },
+    { "id": "testing-completeness", "verdict": "pass", "note": "Tests cover success, threshold boundaries, missing and malformed data, authority tampering, unit mismatches, unsafe arithmetic, strict schemas, stale evidence, and repeated requests." },
+    { "id": "idempotency-resilience", "verdict": "pass", "note": "A requestId deterministically selects one instance name; repeated equivalent requests write byte-equivalent validated content." },
+    { "id": "api-contracts", "verdict": "na", "note": "No network or external API calls." },
+    { "id": "resource-management", "verdict": "pass", "note": "No files, connections, subprocesses, or temporary resources are opened." },
+    { "id": "published-surface-hygiene", "verdict": "pass", "note": "README and fixtures contain only synthetic identifiers and values." },
+    { "id": "schema-strictness", "verdict": "pass", "note": "Global, method, nested input, and persisted output object schemas are strict; persisted output is re-derived and checked against deterministic evaluation." },
+    { "id": "lifetime-gc", "verdict": "pass", "note": "The summary resource declares infinite lifetime and bounded garbage collection." },
+    { "id": "crud-completeness", "verdict": "na", "note": "This is a recommendation summary recorder, not an external CRUD lifecycle model." },
+    { "id": "preflight-checks", "verdict": "na", "note": "The operation validates caller input and only persists Swamp data; it has no external mutation." },
+    { "id": "instance-names", "verdict": "pass", "note": "The sole write targets summary with a validated requestId-derived name; no cross-spec collision exists." },
+    { "id": "data-access", "verdict": "na", "note": "The deterministic method does not read or mutate stored lifecycle state." },
+    { "id": "version-upgrades", "verdict": "na", "note": "This is the initial unpublished version." }
+  ]
+}
